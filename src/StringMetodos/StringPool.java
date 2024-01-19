@@ -1,0 +1,23 @@
+package StringMetodos;
+
+public class StringPool {
+    public static void main(String[] args) {
+        String first = new String("CodeGym");
+        String second = new String("CodeGym");
+        String third = new String("codegym");
+        System.out.println(equal(first, second));
+        System.out.println(equal(second, third));
+    }
+
+    public static boolean equal(String first, String second) {
+        //escribe aquí tu código
+        String cadean1 = first;
+        String cadean2 = second;
+        String t1 = cadean1.intern();
+        String t2 = cadean2.intern();
+        if (t1 == t2) {
+            return true;
+        }
+        return false;
+    }
+}
